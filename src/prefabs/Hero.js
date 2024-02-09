@@ -208,9 +208,9 @@ class CircularState extends State{
         //hero.setTint(0x0000FF)
         hero.setVelocity(0)
         hero.anims.play('circular-attack').once('animationcomplete', () => {
-            scene.cameras.main.shake(250, 0.01)
             this.stateMachine.transition('idle')
         })
+        scene.cameras.main.shake(250, 0.01)
         
     }
 }
